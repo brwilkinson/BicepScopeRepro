@@ -21,7 +21,6 @@ resource hostingPlan 'Microsoft.Web/serverfarms@2021-03-01' = {
   }
 }
 
-
 resource appService 'Microsoft.Web/sites@2021-03-01' = {
   name: 'webSiteName12384'
   location: location
@@ -65,6 +64,7 @@ module registerCustomDnsTxtRecord 'dns-record.bicep' = if(!empty(customDomainNam
     TTL: dnsRecordTTL
   }
 }
+
 var fqdn = '${customDomainName}.${dnsZoneName}'
 resource siteCustomDomain 'Microsoft.Web/sites/hostNameBindings@2021-03-01' = if(!empty(customDomainName) && !empty(dnsZoneName) ) {
   name: fqdn
