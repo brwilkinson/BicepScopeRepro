@@ -4,8 +4,8 @@ param netFrameworkVersion string = 'v4.0'
 param ftpsState string = 'Disabled'
 param DnsZoneSubscriptionID string = '4185fa9b-f470-466a-b3ae-8e6c3314a543'
 param DnsZoneRG string = 'AEU1-PE-CTL-RG-D1'
-param customDomainName string = 'webSiteName12384'
-param dnsZoneName string = 'psthing.com'
+param customDomainName string = '' // 'webSiteName12384'
+param dnsZoneName string = '' // 'psthing.com'
 param dnsRecordTTL int = 300
 
 
